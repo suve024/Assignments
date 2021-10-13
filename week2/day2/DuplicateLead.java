@@ -15,8 +15,8 @@ public class DuplicateLead {
 		WebDriverManager.chromedriver().setup();
 		ChromeDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.get("http://leaftaps.com/opentaps/control/main");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.findElement(By.id("username")).sendKeys("Demosalesmanager");
 		driver.findElement(By.id("password")).sendKeys("crmsfa");
 		driver.findElement(By.className("decorativeSubmit")).click();
@@ -26,8 +26,7 @@ public class DuplicateLead {
 		driver.findElement(By.xpath("//span[text()='Email']")).click();
 		driver.findElement(By.name("emailAddress")).sendKeys("swetha@gmail.com");
 		driver.findElement(By.xpath("//button[text()='Find Leads']")).click();
-		WebElement firstElement = driver
-				.findElement(By.xpath("//div[@class='x-grid3-cell-inner x-grid3-col-firstName']/a"));
+		WebElement firstElement = driver.findElement(By.xpath("//div[@class='x-grid3-cell-inner x-grid3-col-firstName']/a"));
 		String text = firstElement.getText();
 		firstElement.click();
 		driver.findElement(By.linkText("Duplicate Lead")).click();
