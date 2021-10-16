@@ -1,0 +1,15 @@
+String str3 = new String("Kutty");
+String str4 = new String("Kutty");
+		 
+if(str3==str4) {
+	 System.out.println(" Same text");
+} 
+else
+	 System.out.println("Diff text");
+		 
+System.out.println("***");
+
+Output - Diff text
+
+Explanation - The == operator compares references not values(string content) & the above code compares using two String objects.
+string equals() or equalsIgnoreCase() methods can be used to compare the String based on the string content.
