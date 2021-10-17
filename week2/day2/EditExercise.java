@@ -22,12 +22,8 @@ public class EditExercise {
 		driver.findElement(By.id("email")).sendKeys("swetha@gmail.com");
 
 		// Append a text and press keyboard tab
-		String attribute1 = driver.findElement(By.xpath("//*[@id='contentblock']/section/div[2]/div/div/input"))
-				.getAttribute("value");
-		String concat = attribute1.concat("Testleaf");
-		driver.findElement(By.xpath("//*[@id='contentblock']/section/div[2]/div/div/input")).clear();
-		driver.findElement(By.xpath("//*[@id='contentblock']/section/div[2]/div/div/input"))
-				.sendKeys(concat + Keys.TAB);
+		driver.findElement(By.xpath("//*[@id='contentblock']/section/div[2]/div/div/input")).sendKeys(" Testleaf", Keys.TAB);
+
 
 		// Get default text entered
 		String attribute = driver.findElement(By.name("username")).getAttribute("value");
